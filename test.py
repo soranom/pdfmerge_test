@@ -12,10 +12,9 @@ for file in os.listdir(path):
 
 directory.sort()
 
-merger = PdfFileMerger()
-for n in directory:
-    merger.append(n)
+output = PdfFileMerger()
+for i in directory:
+    output.append(path+'/'+i)
 
 output_name = input('Output filename: ')
-merger.write(output_name)
-
+output.write(output_name)
